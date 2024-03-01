@@ -1,0 +1,407 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+
+}
+
+body {
+    background-color: #1f242d;
+    color:#fff;
+
+}
+
+.header {
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    padding:20px 10%;
+    background: transparent;
+    display:flex;
+    justify-content:space-between ;
+    align-items: center;
+    z-index: 100;
+    background-color: #2f3644;
+}
+
+.logo {
+    font-size:25px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 600;
+    cursor:default;
+    opacity: 0;
+    animation:slideRight 1s ease forwards;
+
+}
+
+.navbar a {
+    display:inline-block;
+    font-size:18px;
+    color:#fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left:35px;
+    transition: .3s;
+    opacity:0;
+    animation: slideTop .5s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+}
+
+.navbar a:hover {
+    color:aqua;
+
+}
+
+.home {
+    position: relative;
+    width:100%;
+    height:100vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:70px 10% 0;
+
+}
+
+.home-content{
+    max-width:600px;
+    opacity:0;
+    animation: slideBottom .1s ease forwards;
+    animation-delay:.7s;
+
+}
+
+
+.home-content h3 {
+    font-size:32px;
+    font-weight:700;
+    margin:-3px 0;
+}
+
+.home-content h3: nth of :nth-of-type(2) {
+    margin bottom:30px;
+    animation: slideTop .1s ease forwards;
+    animation-delay:.7s;
+}
+
+
+.home-content h3 span {
+    color:aqua;
+
+}
+
+.home-content h1{
+    font-size:56px;
+    font-weight: 700;
+    margin:-3px 0;
+    opacity:0;
+    animation: slideRight .1s ease forwards;
+    animation-delay:1s;
+
+
+}
+
+.home-content p {
+font-size:16px;
+animation: slideLeft .1s ease forwards;
+animation-delay:1s;
+margin-top:40px;
+}
+
+.home-img img {
+   max-width: 450px;
+   margin-right: -20px;
+   animation: zoomIn 1s ease forwards;
+    animation-delay: 2s;
+}
+
+.social-media a {
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width:40px;
+    height:40px;
+    background:transparent;
+    border:2px solid aqua;
+    border-radius: 50%;
+    font-size:20px;
+    color:aqua;
+    text-decoration: none;
+    margin:30px 15px 30px 0;
+    transition: .5s ease;
+    opacity:0;
+    animation: slideLeft 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
+
+}
+
+.social-media a:hover{
+    background-color: aqua;
+    color:#1f242d;
+    box-shadow: 0 0 20px aqua;
+
+}
+
+.btn {
+    display:inline-block;
+    padding:12px 28px;
+    background: aqua;
+    border-radius: 40px;
+    box-shadow:0 0 10px aqua;
+    text-decoration: none;
+    font-size:16px;
+    color:#1f242d;
+    letter-spacing: 1px;
+    font-weight:600;
+    opacity:0;
+    animation: slideTop 1s ease forwards;
+    animation-delay: 2s;
+
+}
+
+@keyframes slideRight {
+    0% {
+        transform:translateX(-100px);
+        opacity:0;
+    }
+
+    100% {
+        transform:translateX(0px);
+        opacity:1;
+    }
+
+}
+
+
+@keyframes slideTop {
+    0% {
+        transform:translateY(100px);
+        opacity:0;
+    }
+
+    100% {
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+
+@keyframes slideLeft {
+    0% {
+        transform:translateY(100px);
+        opacity:0;
+    }
+
+    100% {
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+
+@keyframes zoomIn{
+    0% {
+        transform:.social-media(0);
+        opacity:0;
+    }
+
+    100% {
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
+
+
+
+@keyframes slideBottom {
+    0% {
+        transform:translateY(-100px);
+        opacity:0;
+    }
+
+    100% {
+        transform:translateY(0px);
+        opacity:1;
+    }
+
+}
+
+
+.hakkimda {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:2rem;
+    background: var(--second-bg-color)
+
+}
+
+.hakkimda-img img{
+width:35vw;
+border-radius: 8px 8px 8px 8px;
+}
+
+.baslik{
+    text-align: center;
+    font-size:4.5rem;
+    margin-top:50px;
+}
+.hakkimda-content h2 {
+   
+    text-align: left;
+    line-height:1.2;
+    color:aqua
+   
+}
+
+.hakkimda-content h3 {
+    font-size:2.6 rem;
+
+}
+ .hakkimda-content p{
+    font-size:1.6rem;
+    margin: 2rem 0 3rem;
+
+ }
+
+.proje-sertifikalar h2{
+    margin: bottom 5rem;
+}
+
+.proje-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem;
+
+}
+
+.proje-container .proje-box{
+    flex:1 1 20rem;
+    background: #1f242d;
+    padding:2rem 1rem 3rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid aqua;
+    margin-top:50px;
+    height:450px;
+
+}
+
+.proje-container i {
+font-size:5rem;
+color: aqua;
+}
+
+.proje-box h3{
+    margin-top:20px;
+    font-size: 2.6rem;
+}
+
+.proje-box p{
+    margin-top: 5px;
+    font-size:1.6rem;
+    margin:1 0 3rem;
+}
+
+.proje-box .btn{
+    margin-top:50px;
+}
+
+.contact {
+    text-align: center;
+    margin-top:50px;
+    font-size:xx-large;
+
+}
+
+.contact h2{
+    margin-bottom: 3rem;
+    color:#fff;
+    animation: slideRight .30s ease forwards;
+    animation-delay:2s;
+    
+
+}
+
+.contact h2 span{
+color:aqua;
+margin-left:10px;
+
+}
+
+@keyframes slideRight {
+    0% {
+        transform:translateX(-100px);
+        opacity:0;
+    }
+
+    100% {
+        transform:translateX(0px);
+        opacity:1;
+    }
+
+}
+
+
+.contact form{
+    max-width:70rem;
+    margin:1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width:100%;
+    padding:1.5rem;
+    font-size:1.6rem;
+    color:aqua;
+    background-color:#454a54;
+    border-radius: .8rem;
+    border:1px solid aqua;
+    margin: .7rem 0;
+
+
+}
+
+
+.contact form .input-box input {
+    width:49%;
+
+}
+
+.contact form textarea {
+    resize:none;
+}
+
+.contact form .btn{
+    margin-top:2rem;
+    cursor:pointer;
+}
+
+hr{
+    margin-top:30px;
+    margin-bottom:30px;
+    color:gray;
+    animation: animasyon 2s ease-in-out;
+}
+
+@keyframes animasyon {
+    0% {
+        transform: translateY(-100px);
+        opacity:0;
+    }
+}
